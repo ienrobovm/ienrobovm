@@ -1,10 +1,10 @@
-# Coursera Downloader
+# TaskbarDock
 
-[![Build Status](https://travis-ci.org/coursera-dl/coursera-dl.svg?branch=master)](https://travis-ci.org/coursera-dl/coursera-dl)
-[![Build status](https://ci.appveyor.com/api/projects/status/3hru0ycv5fbny5k8/branch/master?svg=true)](https://ci.appveyor.com/project/balta2ar/coursera-dl/branch/master)
-[![Coverage Status](https://coveralls.io/repos/coursera-dl/coursera-dl/badge.svg)](https://coveralls.io/r/coursera-dl/coursera-dl)
-[![Latest version on PyPI](https://img.shields.io/pypi/v/coursera-dl.svg)](https://pypi.python.org/pypi/coursera-dl)
-[![Code Climate](https://codeclimate.com/github/coursera-dl/coursera-dl/badges/gpa.svg)](https://codeclimate.com/github/coursera-dl/coursera-dl)
+[![Build Status](https://travis-ci.org/TaskbarDock/TaskbarDock.svg?branch=master)](https://travis-ci.org/TaskbarDock/TaskbarDock)
+[![Build status](https://ci.appveyor.com/api/projects/status/3hru0ycv5fbny5k8/branch/master?svg=true)](https://ci.appveyor.com/project/balta2ar/TaskbarDock/branch/master)
+[![Coverage Status](https://coveralls.io/repos/TaskbarDock/TaskbarDock/badge.svg)](https://coveralls.io/r/TaskbarDock/TaskbarDock)
+[![Latest version on PyPI](https://img.shields.io/pypi/v/TaskbarDock.svg)](https://pypi.python.org/pypi/TaskbarDock)
+[![Code Climate](https://codeclimate.com/github/TaskbarDock/TaskbarDock/badges/gpa.svg)](https://codeclimate.com/github/TaskbarDock/TaskbarDock)
 
 <!-- TOC -->
 
@@ -63,7 +63,7 @@ following limitations:
     posted/linked, and these are sometimes duplicates.
 
 Browser extensions like *DownloadThemAll* is another possibility, but
-`coursera-dl` provides more features such as appropriately named files.
+`TaskbarDock` provides more features such as appropriately named files.
 
 This work was originally inspired in part by [youtube-dl][3] by which
 I've downloaded many other good videos such as those from Khan Academy.
@@ -79,12 +79,12 @@ I've downloaded many other good videos such as those from Khan Academy.
     certain resources.
   * File format extension filter to grab resource types you want.
   * Login credentials accepted on command-line or from `.netrc` file.
-  * Default arguments loaded from `coursera-dl.conf` file.
+  * Default arguments loaded from `TaskbarDock.conf` file.
   * Core functionality tested on Linux, Mac and Windows.
 
 # Disclaimer
 
-`coursera-dl` is meant to be used only for your material that Coursera gives
+`TaskbarDock` is meant to be used only for your material that Coursera gives
 you access to download.
 
 We do not encourage any use that violates their [Terms Of Use][20]. A
@@ -100,7 +100,7 @@ relevant excerpt:
 
 # Installation instructions
 
-`coursera-dl` requires Python 2 or Python 3 and a free Coursera account
+`TaskbarDock` requires Python 2 or Python 3 and a free Coursera account
 enrolled in the class of interest. (As of February of 2016, we test
 automatically the execution of the program with Python versions 2.6, 2.7,
 Pypy, 3.4, 3.5, and 3.6).
@@ -116,14 +116,14 @@ word `python`.  You can also use more advanced features of the program by
 looking at the "Running the script" section of this document.
 
 *Note:* You must already have (manually) agreed to the Honor of Code of the
-particular courses that you want to use with `coursera-dl`.
+particular courses that you want to use with `TaskbarDock`.
 
 ## Recommended installation method for all Operating Systems
 
 From a command line (preferably, from a virtual environment), simply issue
 the command:
 
-    pip install coursera-dl
+    pip install TaskbarDock
 
 
 This will download [the latest released version][23] of the program from the
@@ -134,14 +134,14 @@ If this does not work, because your Python 2 version is too old (e.g. 2.7.5
 on Ubuntu 14.4), try:
 
     apt-get install python3 python3-pip
-    pip3 install coursera-dl
+    pip3 install TaskbarDock
 
 instead.
 
 **Note 1:** We strongly recommend that you *don't* install the package
 globally on your machine (i.e., with root/administrator privileges), as the
 installed modules may conflict with other Python applications that you have
-installed in your system (or they can interfere with `coursera-dl`).  Prefer
+installed in your system (or they can interfere with `TaskbarDock`).  Prefer
 to use the option `--user` to `pip install`, if you need can.
 
 **Note 2:** As already mentioned, we *strongly* recommend that you use a new
@@ -149,7 +149,7 @@ Python 3 interpreter (e.g., 3.4 or later), since Python 3 has better support
 for SSL/TLS (for secure connections) than earlier versions.<br/>
 If you must use Python 2, be sure that you have at least Python 2.7.9 (later
 versions are OK).<br/>
-Otherwise, you can still use `coursera-dl`, but you will have to install the
+Otherwise, you can still use `TaskbarDock`, but you will have to install the
 extra package `ndg-httpsclient`, which may involve compilation (at least on
 Linux systems).
 
@@ -165,7 +165,7 @@ requirements.txt`.
 
 ### Alternative installation method for Unix systems
 
-We strongly recommend that you install `coursera-dl` and all its
+We strongly recommend that you install `TaskbarDock` and all its
 dependencies in a way that does *not* interfere with the rest of your Python
 installation. This is accomplished by the creation of a *virtual
 environment*, or "virtualenv".
@@ -178,17 +178,17 @@ following steps (create/adapt first the directory
     virtualenv my-coursera
     cd my-coursera
     source bin/activate
-    git clone https://github.com/coursera-dl/coursera-dl
-    cd coursera-dl
+    git clone https://github.com/TaskbarDock/TaskbarDock
+    cd TaskbarDock
     pip install -r requirements.txt
-    ./coursera-dl ...
+    ./TaskbarDock ...
 
 To further download new videos from your classes, simply perform:
 
     cd /directory/where/I/want/my/courses/my-coursera
     source bin/activate
-    cd coursera-dl
-    ./coursera-dl ...
+    cd TaskbarDock
+    ./TaskbarDock ...
 
 We are working on streamlining this whole process so that it is as simple as
 possible, but to support older versions of Python and to cope with Coursera
@@ -198,7 +198,7 @@ Python interpreter that you can.
 
 ### ArchLinux
 
-AUR package: [coursera-dl](https://aur.archlinux.org/packages/coursera-dl/)
+AUR package: [TaskbarDock](https://aur.archlinux.org/packages/TaskbarDock/)
 
 ### Installing dependencies on your own
 
@@ -241,12 +241,12 @@ docker run --rm -it \
     courseradl/courseradl -n /netrc
 ```
 
-The actual working dir for coursera-dl is /courses, all courses will be
+The actual working dir for TaskbarDock is /courses, all courses will be
 downloaded there if you don't specify otherwise.
 
 ## Windows
 
-`python -m pip install coursera-dl`
+`python -m pip install TaskbarDock`
 
 Be sure that the Python install path is added to the PATH system environment
 variables. This can be found in Control Panel > System > Advanced System
@@ -265,7 +265,7 @@ Example:
 C:\Users\<user>\AppData\Local\Programs\Python\Python35-32\Scripts;C:\Users\<user>\AppData\Local\Programs\Python\Python35-32;
 ```
 
-Coursera-dl can now be run from commandline or powershell.
+TaskbarDock can now be run from commandline or powershell.
 
 ## Create an account with Coursera
 
@@ -274,37 +274,37 @@ a class. See https://www.coursera.org/courses for the list of classes.
 
 # Running the script
 
-Refer to `coursera-dl --help` for a complete, up-to-date reference on the runtime options
+Refer to `TaskbarDock --help` for a complete, up-to-date reference on the runtime options
 supported by this utility.
 
 Run the script to download the materials by providing your Coursera account
 credentials (e.g. email address and password or a `~/.netrc` file), the
 class names, as well as any additional parameters:
 ```
-    General:                     coursera-dl -u <user> -p <pass> modelthinking-004
+    General:                     TaskbarDock -u <user> -p <pass> modelthinking-004
 
-    With CAUTH parameter:	 coursera-dl -ca 'some-ca-value-from-browser' modelthinking-004
+    With CAUTH parameter:	 TaskbarDock -ca 'some-ca-value-from-browser' modelthinking-004
 ```
 If you don't want to type your password in command line as plain text, you can use the
 script without `-p` option. In this case you will be prompted for password  once the
 script is run.
 
-Here are some examples of how to invoke `coursera-dl` from the command line:
+Here are some examples of how to invoke `TaskbarDock` from the command line:
 ```
-    Without -p field:            coursera-dl -u <user> modelthinking-004
-    Multiple classes:            coursera-dl -u <user> -p <pass> saas historyofrock1-001 algo-2012-002
-    Filter by section name:      coursera-dl -u <user> -p <pass> -sf "Chapter_Four" crypto-004
-    Filter by lecture name:      coursera-dl -u <user> -p <pass> -lf "3.1_" ml-2012-002
-    Download only ppt files:     coursera-dl -u <user> -p <pass> -f "ppt" qcomp-2012-001
-    Use a ~/.netrc file:         coursera-dl -n -- matrix-001
-    Get the preview classes:     coursera-dl -n -b ni-001
-	Download videos at 720p:     coursera-dl -n --video-resolution 720p ni-001
-    Specify download path:       coursera-dl -n --path=C:\Coursera\Classes\ comnetworks-002
-    Display help:                coursera-dl --help
+    Without -p field:            TaskbarDock -u <user> modelthinking-004
+    Multiple classes:            TaskbarDock -u <user> -p <pass> saas historyofrock1-001 algo-2012-002
+    Filter by section name:      TaskbarDock -u <user> -p <pass> -sf "Chapter_Four" crypto-004
+    Filter by lecture name:      TaskbarDock -u <user> -p <pass> -lf "3.1_" ml-2012-002
+    Download only ppt files:     TaskbarDock -u <user> -p <pass> -f "ppt" qcomp-2012-001
+    Use a ~/.netrc file:         TaskbarDock -n -- matrix-001
+    Get the preview classes:     TaskbarDock -n -b ni-001
+	Download videos at 720p:     TaskbarDock -n --video-resolution 720p ni-001
+    Specify download path:       TaskbarDock -n --path=C:\Coursera\Classes\ comnetworks-002
+    Display help:                TaskbarDock --help
 
     Maintain a list of classes in a dir:
       Initialize:              mkdir -p CURRENT/{class1,class2,..classN}
-      Update:                  coursera-dl -n --path CURRENT `\ls CURRENT`
+      Update:                  TaskbarDock -n --path CURRENT `\ls CURRENT`
 ```
 **Note:** If your `ls` command is aliased to display a colorized output, you
 may experience problems.  Be sure to escape the `ls` command (use `\ls`) to
@@ -325,16 +325,16 @@ time on the command line. To use it, simply add a line like the one below to
 a file named `.netrc` in your home directory (or the [equivalent][8], if you
 are using Windows) with contents like:
 ```
-    machine coursera-dl login <user> password <pass>
+    machine TaskbarDock login <user> password <pass>
 ```
 Create the file if it doesn't exist yet.  From then on, you can switch from
-using `-u` and `-p` to simply call `coursera-dl` with the option `-n`
+using `-u` and `-p` to simply call `TaskbarDock` with the option `-n`
 instead.  This is especially convenient, as typing usernames (email
 addresses) and passwords directly on the command line can get tiresome (even
 more if you happened to choose a "strong" password).
 
 Alternatively, if you want to store your preferred parameters (which might
-also include your username and password), create a file named `coursera-dl.conf`
+also include your username and password), create a file named `TaskbarDock.conf`
 where the script is supposed to be executed, with the following format:
 ```
     --username <user>
@@ -347,7 +347,7 @@ where the script is supposed to be executed, with the following format:
 Parameters which are specified in the file will be overriden if they are 
 provided again on the commandline.
 
-**Note:** In `coursera-dl.conf`, all the parameters should not be wrapped
+**Note:** In `TaskbarDock.conf`, all the parameters should not be wrapped
 with quotes.
 
 ## Resuming downloads
@@ -363,11 +363,11 @@ job to delete them manually before next start. For this reason we
 added an option called `--resume` which continues your downloads from
 where they stopped:
 
-	coursera-dl -u <user> -p <pass> --resume sdn1-001
+	TaskbarDock -u <user> -p <pass> --resume sdn1-001
 
 This option can also be used with external downloaders:
 
-	coursera-dl --wget -u <user> -p <pass> --resume sdn1-001
+	TaskbarDock --wget -u <user> -p <pass> --resume sdn1-001
 
 *Note 1*: Some external downloaders use their own built-in resume feature
 which may not be compatible with others, so use them at your own risk.
@@ -413,7 +413,7 @@ one of the following actions solve your problem:
 
 * If results show 0 sections, you most likely have provided invalid
   credentials (username and/or password in the command line or in your
-  `.netrc` file or in your `coursera-dl.conf` file).
+  `.netrc` file or in your `TaskbarDock.conf` file).
 
 * For courses that have not started yet, but have had a previous iteration
   sometimes a preview is available, containing all the classes from the last
@@ -434,7 +434,7 @@ one of the following actions solve your problem:
     * You get an error when using `-n` to specify that you want to use a
       `.netrc` file and,
     * You want the script to use your default netrc file and,
-    * You get a message saying `coursera-dl: error: too few arguments`
+    * You get a message saying `TaskbarDock: error: too few arguments`
 
       Then you should specify `--` as an argument after `-n`, that is, `-n --`
       or change the order in which you pass the arguments to the script, so that
@@ -450,7 +450,7 @@ one of the following actions solve your problem:
   you installed the correct project. We had to use a different name in pip
   because our original name was already taken. Remember to install it using:
   ```
-      pip install coursera-dl
+      pip install TaskbarDock
   ```
 
 ## China issues
@@ -481,7 +481,7 @@ If none of the above works for you, there is nothing we can do.
 
 ## Download timeouts
 
-Coursera-dl supports external downloaders but note that they are only used to
+TaskbarDock supports external downloaders but note that they are only used to
 download materials after the syllabus has been parsed, e.g. videos, PDFs, some
 handouts and additional files (syllabus is always downloaded using the internal
 downloader). If you experience problems with downloading such materials, you may
@@ -489,7 +489,7 @@ want to start using external downloader and configure its timeout values. For
 example, you can use aria2c downloader by passing `--aria` option:
 
 ```
-coursera-dl -n --path . --aria2  <course-name>
+TaskbarDock -n --path . --aria2  <course-name>
 ```
 
 And put this into aria2c's configuration file `~/.aria2/aria2.conf` to reduce
@@ -513,7 +513,7 @@ set HTTP_PROXY=http://host:port
 set HTTPS_PROXY=http://host:port
 ```
 
-Related discussion: [#205](https://github.com/coursera-dl/coursera-dl/issues/205)
+Related discussion: [#205](https://github.com/TaskbarDock/TaskbarDock/issues/205)
 
 ## Windows: Failed to create process
 
@@ -522,7 +522,7 @@ or wherever Python installed (above is default for Windows)
 edit below file in idle: (right click on script name and select 'edit with idle in menu)
 
 ```
-coursera-dl-script
+TaskbarDock-script
 ```
 
 from
@@ -549,13 +549,13 @@ This is a known error, please do not report about this error message! The proble
 sudo apt-get install build-essential python-dev libssl-dev libffi-dev
 pip install --user urllib3 pyasn1 ndg-httpsclient pyOpenSSL
 ```
-If the error remains, try installing coursera-dl from github following this instruction:
-https://github.com/coursera-dl/coursera-dl#alternative-installation-method-for-unix-systems
+If the error remains, try installing TaskbarDock from github following this instruction:
+https://github.com/TaskbarDock/TaskbarDock#alternative-installation-method-for-unix-systems
 
 If you still have the problem, please read the following issues for more ideas on how to fix it:
-[#330](https://github.com/coursera-dl/coursera-dl/issues/330)
-[#377](https://github.com/coursera-dl/coursera-dl/issues/377)
-[#329](https://github.com/coursera-dl/coursera-dl/issues/329)
+[#330](https://github.com/TaskbarDock/TaskbarDock/issues/330)
+[#377](https://github.com/TaskbarDock/TaskbarDock/issues/377)
+[#329](https://github.com/TaskbarDock/TaskbarDock/issues/329)
 
 This is also worth reading:
 https://urllib3.readthedocs.io/en/latest/security.html#insecureplatformwarning
@@ -577,17 +577,17 @@ Before reporting any issue please follow the steps below:
 recommended versions of its dependencies, see them in the file
 `requirements.txt`.  Use the following command if in doubt:
 
-        pip install --upgrade coursera-dl
+        pip install --upgrade TaskbarDock
 
 2. If the problem persists, feel free to [open an issue][issue] in our
 bugtracker, please fill the issue template with *as much information as
 possible*.
 
-[issue]: https://github.com/coursera-dl/coursera-dl/issues
+[issue]: https://github.com/TaskbarDock/TaskbarDock/issues
 
 # Filing an issue/Reporting a bug
 
-When reporting bugs against `coursera-dl`, please don't forget to include
+When reporting bugs against `TaskbarDock`, please don't forget to include
 enough information so that you can help us help you:
 
 * Is the problem happening with the latest version of the script?
@@ -649,7 +649,7 @@ activities. If you have problems, **PLEASE**, file them on the isue tracker.
 [8]: http://stackoverflow.com/a/6031266/962311
 [9]: https://chrome.google.com/webstore/detail/cookietxt-export/lopabhfecdfhgogdbojmaicoicjekelh
 [10]: https://addons.mozilla.org/en-US/firefox/addon/export-cookies/
-[11]: https://github.com/coursera-dl/coursera-dl/issues
+[11]: https://github.com/TaskbarDock/TaskbarDock/issues
 [13]: http://techcrunch.com/2013/02/20/coursera-adds-29-schools-90-courses-and-4-new-languages-to-its-online-learning-platform/
 [14]: http://www.tunapanda.org
 [15]: https://github.com/html5lib/html5lib-python
@@ -659,7 +659,7 @@ activities. If you have problems, **PLEASE**, file them on the isue tracker.
 [19]: https://pypi.python.org/pypi/six/
 [20]: https://www.coursera.org/about/terms
 [22]: https://pypi.python.org/
-[23]: https://pypi.python.org/pypi/coursera-dl
-[issue213]: https://github.com/coursera-dl/coursera-dl/issues/213
-[issue500]: https://github.com/coursera-dl/coursera-dl/issues/500
+[23]: https://pypi.python.org/pypi/TaskbarDock
+[issue213]: https://github.com/TaskbarDock/TaskbarDock/issues/213
+[issue500]: https://github.com/TaskbarDock/TaskbarDock/issues/500
 [pipinstallerbug]: http://stackoverflow.com/questions/31808180/installing-pyinstaller-via-pip-leads-to-failed-to-create-process
